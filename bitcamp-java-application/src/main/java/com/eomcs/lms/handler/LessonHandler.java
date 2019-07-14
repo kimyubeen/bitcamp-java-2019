@@ -1,14 +1,16 @@
-package com.eomcs.lms;
+package com.eomcs.lms.handler;
 
 import java.util.Scanner;
+import com.eomcs.lms.domain.Lesson;
+import com.eomcs.lms.util.Input;
 
 public class LessonHandler {
-  static Scanner keyScan;
-  static final int LENGTH = 10;
-  static Lesson[] lessons = new Lesson[LENGTH];
-  static int lessonsSize = 0;
+  public static Scanner keyScan;
+  public static final int LENGTH = 10;
+  public static Lesson[] lessons = new Lesson[LENGTH];
+  public static int lessonsSize = 0;
   
-  static void addLesson() {
+  public static void addLesson() {
     Lesson lesson = new Lesson();
     
     lesson.no = Input.getIntValue("번호? ");
@@ -24,7 +26,7 @@ public class LessonHandler {
     System.out.println("저장하였습니다.");
   }
 
-  static void listLesson() {
+  public static void listLesson() {
     for (int i = 0; i < lessonsSize; i++)
       System.out.printf("%d, %-20s, %s ~ %s\n", lessons[i].no, lessons[i].title,
           lessons[i].startDate, lessons[i].endDate);
