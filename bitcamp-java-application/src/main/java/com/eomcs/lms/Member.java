@@ -3,12 +3,12 @@ package com.eomcs.lms;
 import java.sql.Date;
 
 public class Member {
-  public int no;
-  public String name;
-  public String email;
-  public String password;
-  public String photo;
-  public String tel;
-  public Date registeredDate;
+  int no;
+  String name;
+  String email;
+  String password;
+  String photo;
+  String tel;
+  Date registeredDate;
 
 }

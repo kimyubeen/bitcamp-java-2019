@@ -9,7 +9,7 @@ public class Input {
   static int getIntValue(String message) {
     while (true) {
       try {
-        System.out.println(message);
+        System.out.print(message);
         return Integer.parseInt(keyScan.nextLine());
       } catch (NumberFormatException e) {
         System.out.println("숫자를 입력하세요.");
