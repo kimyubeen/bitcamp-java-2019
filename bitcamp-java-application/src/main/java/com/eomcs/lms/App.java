@@ -6,9 +6,12 @@ package com.eomcs.lms;
 import java.util.Scanner;
 
 public class App {
-  static Scanner keyScan = new Scanner(System.in);
+  public static Scanner keyScan;
   
   public static void main(String[] args) {
+    keyScan = new Scanner(System.in);
+    
+    Input.keyScan = keyScan;
     LessonHandler.keyScan = keyScan;
     MemberHandler.keyScan = keyScan;
     BoardHandler.keyScan = keyScan;
@@ -46,7 +49,7 @@ public class App {
     }
   }
 
-  static String prompt() {
+  public static String prompt() {
     System.out.printf("명령> ");
     return keyScan.nextLine();
   }
